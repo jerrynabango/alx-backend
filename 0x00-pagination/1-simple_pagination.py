@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Simple pagination"""
 
-import csv
 from typing import List, Tuple
+import csv
 
 
 class Server:
