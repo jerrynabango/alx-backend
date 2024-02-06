@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
 """Use user locale"""
 
-from flask import Flask, render_template, request, g
+from typing import (
+    Dict, Union
+)
+
+from flask import Flask
+from flask import g, request
+from flask import render_template
 from flask_babel import Babel
-from typing import Dict, Union
 
 
 class Config(object):
