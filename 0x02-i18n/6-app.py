@@ -1,22 +1,19 @@
 #!/usr/bin/env python3
-"""Use user locale"""
-
+""" Create Flask App """
 from flask import Flask, render_template, request, g
 from flask_babel import Babel
-from typing import Dict, Union
 
 
-class Config(object):
-    """Configuration"""
+class Config:
+    """ Configure available languages in the app """
     LANGUAGES = ["en", "fr"]
-    BABEL_DEFAULT_LOCALE = "en"
-    BABEL_DEFAULT_TIMEZONE = "UTC"
+    BABEL_DEFAULT_LOCALE = 'en'
+    BABEL_DEFAULT_TIMEZONE = 'UTC'
 
 
 app = Flask(__name__)
-app.config.from_object(Config)
 babel = Babel(app)
-
+app.config.from_object(Config)
 
 users = {
     1: {"name": "Balou", "locale": "fr", "timezone": "Europe/Paris"},
@@ -26,36 +23,41 @@ users = {
 }
 
 
-def get_user(id) -> Union[Dict[str, Union[str, None]], None]:
-    """User"""
-    return users.get(int(id), {})
-
-
-@babel.localeselector
-def get_locale() -> str:
-    """Request"""
-    options = [
-        request.args.get("locale", '').strip(),
-        g.user.get("locale", None) if g.user else None,
-        request.accept_languages.best_match(app.config["LANGUAGES"]),
-        Config.BABEL_DEFAULT_LOCALE
-    ]
-    for locale in options:
-        if locale and locale in Config.LANGUAGES:
-            return locale
+def get_user(user_id):
+    """ Retrieve user information based on the provided user id """
+    return users.get(user_id)
 
 
 @app.before_request
-def before_request() -> None:
-    """Request"""
-    setattr(g, "user", get_user(request.args.get("login_as", 0)))
+def before_request():
+    """ Execute before all other functions """
+    user_id = request.args.get('login_as')
+    if user_id:
+        user = get_user(int(user_id))
+        g.user = user
+    else:
+        g.user = None
 
 
-@app.route("/")
-def basic():
-    """HTML rendering"""
-    return render_template("5-index.html")
+@babel.localeselector
+def get_locale():
+    """ Determine the best match with our supported languages """
+    locale_param = request.args.get('locale')
+
+    if locale_param and locale_param in app.config['LANGUAGES']:
+        return locale_param
+
+    if g.user and g.user.get('locale') in app.config['LANGUAGES']:
+        return g.user.get('locale')
+
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 
-if __name__ == "__main__":
+@app.route('/')
+def index():
+    """ Home page """
+    return render_template('5-index.html')
+
+
+if __name__ == '__main__':
     app.run()
