@@ -1,0 +1,232 @@
+[
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "combinations",
+        "importPath": "itertools",
+        "description": "itertools",
+        "isExtraImport": true,
+        "detail": "itertools",
+        "documentation": {}
+    },
+    {
+        "label": "combinations",
+        "importPath": "itertools",
+        "description": "itertools",
+        "isExtraImport": true,
+        "detail": "itertools",
+        "documentation": {}
+    },
+    {
+        "label": "uname",
+        "importPath": "os",
+        "description": "os",
+        "isExtraImport": true,
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "cpu_count",
+        "importPath": "multiprocessing",
+        "description": "multiprocessing",
+        "isExtraImport": true,
+        "detail": "multiprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "powerset",
+        "kind": 2,
+        "importPath": "redis-6.0.10.deps.jemalloc.scripts.gen_run_tests",
+        "description": "redis-6.0.10.deps.jemalloc.scripts.gen_run_tests",
+        "peekOfCode": "def powerset(items):\n    result = []\n    for i in xrange(len(items) + 1):\n        result += combinations(items, i)\n    return result\npossible_compilers = [('gcc', 'g++'), ('clang', 'clang++')]\npossible_compiler_opts = [\n    '-m32',\n]\npossible_config_opts = [",
+        "detail": "redis-6.0.10.deps.jemalloc.scripts.gen_run_tests",
+        "documentation": {}
+    },
+    {
+        "label": "bits_64",
+        "kind": 5,
+        "importPath": "redis-6.0.10.deps.jemalloc.scripts.gen_run_tests",
+        "description": "redis-6.0.10.deps.jemalloc.scripts.gen_run_tests",
+        "peekOfCode": "bits_64 = sys.maxsize > 2**32\nnparallel = cpu_count() * 2\nuname = uname()[0]\ndef powerset(items):\n    result = []\n    for i in xrange(len(items) + 1):\n        result += combinations(items, i)\n    return result\npossible_compilers = [('gcc', 'g++'), ('clang', 'clang++')]\npossible_compiler_opts = [",
+        "detail": "redis-6.0.10.deps.jemalloc.scripts.gen_run_tests",
+        "documentation": {}
+    },
+    {
+        "label": "nparallel",
+        "kind": 5,
+        "importPath": "redis-6.0.10.deps.jemalloc.scripts.gen_run_tests",
+        "description": "redis-6.0.10.deps.jemalloc.scripts.gen_run_tests",
+        "peekOfCode": "nparallel = cpu_count() * 2\nuname = uname()[0]\ndef powerset(items):\n    result = []\n    for i in xrange(len(items) + 1):\n        result += combinations(items, i)\n    return result\npossible_compilers = [('gcc', 'g++'), ('clang', 'clang++')]\npossible_compiler_opts = [\n    '-m32',",
+        "detail": "redis-6.0.10.deps.jemalloc.scripts.gen_run_tests",
+        "documentation": {}
+    },
+    {
+        "label": "uname",
+        "kind": 5,
+        "importPath": "redis-6.0.10.deps.jemalloc.scripts.gen_run_tests",
+        "description": "redis-6.0.10.deps.jemalloc.scripts.gen_run_tests",
+        "peekOfCode": "uname = uname()[0]\ndef powerset(items):\n    result = []\n    for i in xrange(len(items) + 1):\n        result += combinations(items, i)\n    return result\npossible_compilers = [('gcc', 'g++'), ('clang', 'clang++')]\npossible_compiler_opts = [\n    '-m32',\n]",
+        "detail": "redis-6.0.10.deps.jemalloc.scripts.gen_run_tests",
+        "documentation": {}
+    },
+    {
+        "label": "possible_compilers",
+        "kind": 5,
+        "importPath": "redis-6.0.10.deps.jemalloc.scripts.gen_run_tests",
+        "description": "redis-6.0.10.deps.jemalloc.scripts.gen_run_tests",
+        "peekOfCode": "possible_compilers = [('gcc', 'g++'), ('clang', 'clang++')]\npossible_compiler_opts = [\n    '-m32',\n]\npossible_config_opts = [\n    '--enable-debug',\n    '--enable-prof',\n    '--disable-stats',\n]\nif bits_64:",
+        "detail": "redis-6.0.10.deps.jemalloc.scripts.gen_run_tests",
+        "documentation": {}
+    },
+    {
+        "label": "possible_compiler_opts",
+        "kind": 5,
+        "importPath": "redis-6.0.10.deps.jemalloc.scripts.gen_run_tests",
+        "description": "redis-6.0.10.deps.jemalloc.scripts.gen_run_tests",
+        "peekOfCode": "possible_compiler_opts = [\n    '-m32',\n]\npossible_config_opts = [\n    '--enable-debug',\n    '--enable-prof',\n    '--disable-stats',\n]\nif bits_64:\n    possible_config_opts.append('--with-lg-vaddr=56')",
+        "detail": "redis-6.0.10.deps.jemalloc.scripts.gen_run_tests",
+        "documentation": {}
+    },
+    {
+        "label": "possible_config_opts",
+        "kind": 5,
+        "importPath": "redis-6.0.10.deps.jemalloc.scripts.gen_run_tests",
+        "description": "redis-6.0.10.deps.jemalloc.scripts.gen_run_tests",
+        "peekOfCode": "possible_config_opts = [\n    '--enable-debug',\n    '--enable-prof',\n    '--disable-stats',\n]\nif bits_64:\n    possible_config_opts.append('--with-lg-vaddr=56')\npossible_malloc_conf_opts = [\n    'tcache:false',\n    'dss:primary',",
+        "detail": "redis-6.0.10.deps.jemalloc.scripts.gen_run_tests",
+        "documentation": {}
+    },
+    {
+        "label": "possible_malloc_conf_opts",
+        "kind": 5,
+        "importPath": "redis-6.0.10.deps.jemalloc.scripts.gen_run_tests",
+        "description": "redis-6.0.10.deps.jemalloc.scripts.gen_run_tests",
+        "peekOfCode": "possible_malloc_conf_opts = [\n    'tcache:false',\n    'dss:primary',\n    'percpu_arena:percpu',\n    'background_thread:true',\n]\nprint 'set -e'\nprint 'if [ -f Makefile ] ; then make relclean ; fi'\nprint 'autoconf'\nprint 'rm -rf run_tests.out'",
+        "detail": "redis-6.0.10.deps.jemalloc.scripts.gen_run_tests",
+        "documentation": {}
+    },
+    {
+        "label": "ind",
+        "kind": 5,
+        "importPath": "redis-6.0.10.deps.jemalloc.scripts.gen_run_tests",
+        "description": "redis-6.0.10.deps.jemalloc.scripts.gen_run_tests",
+        "peekOfCode": "ind = 0\nfor cc, cxx in possible_compilers:\n    for compiler_opts in powerset(possible_compiler_opts):\n        for config_opts in powerset(possible_config_opts):\n            for malloc_conf_opts in powerset(possible_malloc_conf_opts):\n                if cc is 'clang' \\\n                  and '-m32' in possible_compiler_opts \\\n                  and '--enable-prof' in config_opts:\n                    continue\n                config_line = (",
+        "detail": "redis-6.0.10.deps.jemalloc.scripts.gen_run_tests",
+        "documentation": {}
+    },
+    {
+        "label": "travis_template",
+        "kind": 5,
+        "importPath": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "description": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "peekOfCode": "travis_template = \"\"\"\\\nlanguage: generic\nmatrix:\n  include:\n%s\nbefore_script:\n  - autoconf\n  - ./configure ${COMPILER_FLAGS:+ \\\n      CC=\"$CC $COMPILER_FLAGS\" \\\n      CXX=\"$CXX $COMPILER_FLAGS\" } \\",
+        "detail": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "documentation": {}
+    },
+    {
+        "label": "MAX_UNUSUAL_OPTIONS",
+        "kind": 5,
+        "importPath": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "description": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "peekOfCode": "MAX_UNUSUAL_OPTIONS = 2\nos_default = 'linux'\nos_unusual = 'osx'\ncompilers_default = 'CC=gcc CXX=g++'\ncompilers_unusual = 'CC=clang CXX=clang++'\ncompiler_flag_unusuals = ['-m32']\nconfigure_flag_unusuals = [\n    '--enable-debug',\n    '--enable-prof',\n    '--disable-stats',",
+        "detail": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "documentation": {}
+    },
+    {
+        "label": "os_default",
+        "kind": 5,
+        "importPath": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "description": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "peekOfCode": "os_default = 'linux'\nos_unusual = 'osx'\ncompilers_default = 'CC=gcc CXX=g++'\ncompilers_unusual = 'CC=clang CXX=clang++'\ncompiler_flag_unusuals = ['-m32']\nconfigure_flag_unusuals = [\n    '--enable-debug',\n    '--enable-prof',\n    '--disable-stats',\n]",
+        "detail": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "documentation": {}
+    },
+    {
+        "label": "os_unusual",
+        "kind": 5,
+        "importPath": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "description": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "peekOfCode": "os_unusual = 'osx'\ncompilers_default = 'CC=gcc CXX=g++'\ncompilers_unusual = 'CC=clang CXX=clang++'\ncompiler_flag_unusuals = ['-m32']\nconfigure_flag_unusuals = [\n    '--enable-debug',\n    '--enable-prof',\n    '--disable-stats',\n]\nmalloc_conf_unusuals = [",
+        "detail": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "documentation": {}
+    },
+    {
+        "label": "compilers_default",
+        "kind": 5,
+        "importPath": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "description": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "peekOfCode": "compilers_default = 'CC=gcc CXX=g++'\ncompilers_unusual = 'CC=clang CXX=clang++'\ncompiler_flag_unusuals = ['-m32']\nconfigure_flag_unusuals = [\n    '--enable-debug',\n    '--enable-prof',\n    '--disable-stats',\n]\nmalloc_conf_unusuals = [\n    'tcache:false',",
+        "detail": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "documentation": {}
+    },
+    {
+        "label": "compilers_unusual",
+        "kind": 5,
+        "importPath": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "description": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "peekOfCode": "compilers_unusual = 'CC=clang CXX=clang++'\ncompiler_flag_unusuals = ['-m32']\nconfigure_flag_unusuals = [\n    '--enable-debug',\n    '--enable-prof',\n    '--disable-stats',\n]\nmalloc_conf_unusuals = [\n    'tcache:false',\n    'dss:primary',",
+        "detail": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "documentation": {}
+    },
+    {
+        "label": "compiler_flag_unusuals",
+        "kind": 5,
+        "importPath": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "description": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "peekOfCode": "compiler_flag_unusuals = ['-m32']\nconfigure_flag_unusuals = [\n    '--enable-debug',\n    '--enable-prof',\n    '--disable-stats',\n]\nmalloc_conf_unusuals = [\n    'tcache:false',\n    'dss:primary',\n    'percpu_arena:percpu',",
+        "detail": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "documentation": {}
+    },
+    {
+        "label": "configure_flag_unusuals",
+        "kind": 5,
+        "importPath": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "description": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "peekOfCode": "configure_flag_unusuals = [\n    '--enable-debug',\n    '--enable-prof',\n    '--disable-stats',\n]\nmalloc_conf_unusuals = [\n    'tcache:false',\n    'dss:primary',\n    'percpu_arena:percpu',\n    'background_thread:true',",
+        "detail": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "documentation": {}
+    },
+    {
+        "label": "malloc_conf_unusuals",
+        "kind": 5,
+        "importPath": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "description": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "peekOfCode": "malloc_conf_unusuals = [\n    'tcache:false',\n    'dss:primary',\n    'percpu_arena:percpu',\n    'background_thread:true',\n]\nall_unusuals = (\n    [os_unusual] + [compilers_unusual] + compiler_flag_unusuals\n    + configure_flag_unusuals + malloc_conf_unusuals\n)",
+        "detail": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "documentation": {}
+    },
+    {
+        "label": "all_unusuals",
+        "kind": 5,
+        "importPath": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "description": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "peekOfCode": "all_unusuals = (\n    [os_unusual] + [compilers_unusual] + compiler_flag_unusuals\n    + configure_flag_unusuals + malloc_conf_unusuals\n)\nunusual_combinations_to_test = []\nfor i in xrange(MAX_UNUSUAL_OPTIONS + 1):\n    unusual_combinations_to_test += combinations(all_unusuals, i)\ninclude_rows = \"\"\nfor unusual_combination in unusual_combinations_to_test:\n    os = os_default",
+        "detail": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "documentation": {}
+    },
+    {
+        "label": "unusual_combinations_to_test",
+        "kind": 5,
+        "importPath": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "description": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "peekOfCode": "unusual_combinations_to_test = []\nfor i in xrange(MAX_UNUSUAL_OPTIONS + 1):\n    unusual_combinations_to_test += combinations(all_unusuals, i)\ninclude_rows = \"\"\nfor unusual_combination in unusual_combinations_to_test:\n    os = os_default\n    if os_unusual in unusual_combination:\n        os = os_unusual\n    compilers = compilers_default\n    if compilers_unusual in unusual_combination:",
+        "detail": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "documentation": {}
+    },
+    {
+        "label": "include_rows",
+        "kind": 5,
+        "importPath": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "description": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "peekOfCode": "include_rows = \"\"\nfor unusual_combination in unusual_combinations_to_test:\n    os = os_default\n    if os_unusual in unusual_combination:\n        os = os_unusual\n    compilers = compilers_default\n    if compilers_unusual in unusual_combination:\n        compilers = compilers_unusual\n    compiler_flags = [\n        x for x in unusual_combination if x in compiler_flag_unusuals]",
+        "detail": "redis-6.0.10.deps.jemalloc.scripts.gen_travis",
+        "documentation": {}
+    }
+]
